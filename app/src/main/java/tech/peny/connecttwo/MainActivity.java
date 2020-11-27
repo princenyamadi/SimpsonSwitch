@@ -16,16 +16,15 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView bartImageView = (ImageView) findViewById(R.id.bartImageView);
         ImageView homerImageView = (ImageView) findViewById(R.id.homerImageView);
-        bartImageView.animate().alpha(0).setDuration(2000);
+//        bartImageView.animate().alpha(0).setDuration(2000);
         if(bartIsShowing){
             bartIsShowing = false;
-            bartImageView.animate().alpha(0).setDuration(2000);
-            homerImageView.animate().alpha(1).setDuration(2000);
+            bartImageView.animate().translationYBy(1000).alpha(0).scaleX(0.5f).scaleY(0.5f).setDuration(2000);
         }else{
             bartIsShowing = true;
-            homerImageView.animate().alpha(0).setDuration(2000);
-            bartImageView.animate().alpha(1).setDuration(2000);
+            bartImageView.animate().translationYBy(-1000).alpha(1).scaleX(0.7f).scaleY(0.7f).setDuration(2000);
         }
+
 
 
 
